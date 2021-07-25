@@ -1,0 +1,115 @@
+{% extends 'registration/base.html' %} 
+{% block content %}
+<section>
+
+
+
+	<!--Header starts -->
+
+    <header>
+	    <div id  ="logo">
+             <a href="home.html"><img src="images/logo.png" alt="Logo"></a>
+		</div>
+		<nav>
+           <ul>
+		      <li ><a href="contact.html">Log in</a></li>
+		      <li ><a href="contact.html">Register Now</a></li>
+		      <li ><a href="contact.html">Contact</a></li>
+		      <li ><a href="contact.html">Employers</a></li>
+	           <li ><a href="contact.html">Jobs</a></li>
+	           <li><a href="services.html">Services</a></li>
+	           <li><a href="about.html">About Us</a></li>
+               <li><a href="home.html">Home</a></li>
+           </ul>
+	    </nav>
+    </header>
+
+	<!--Header ends -->
+
+
+	<div id="account_banner">
+	        <h5>Clicky India</h5>
+	        <h1>Welcome</h1>
+       <div class="row">
+      <div class="col-md-12 col-centered mt-3">
+        <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+      </div>
+    </div>
+	    </div>
+
+	<main>
+       <div id="info">
+       <h1 style="font-size:40px; text-align:center;"> Employee Agency</h1>
+		<table>
+		       <tr>
+                   <td>Name</td>
+                   <td>{{user.username}}</td>
+		       </tr>
+		       <tr>
+			       <td>Email id</td>
+                   <td>{{user.email}}</td>
+		       </tr>
+		       <tr>
+			       <td>Phone</td>
+                   <td>{{user.phone}}</td>
+		       </tr>
+			   <tr>
+			       <td>Sin Number</td>
+                   <td>{{user.sin}}</td>
+		       </tr>
+		</table>
+	   </div>
+
+ </main>
+
+	    <!-- Services section ends -->
+
+
+		<!-- footer top content section started -->
+
+        <div id="footer-top">
+            <div id="foot1">
+	            <h2>Clicy India</h2>
+	            <p>We are becoming the most trusted digital<br>
+				 marketing agency in India. We provide you<br>
+                with the best digital marketing solution that<br>
+			    will help you to enhance your brand<br>
+                reputation on the web.</p>
+            </div>
+
+            <div id ="foot2">
+	         <img src="images/footer.jpg" alt="Responsive Web Design Graphic">
+	        </div>
+
+            <div id="foot3">
+	            <h2>Get in Touch</h2>
+	            <ul>
+	                <li><b>Location :</b> SCO 2246 Geeta Nagari, Ambala City</li>
+	                <li><b>Email id :</b> <a href="mailto:info@clickyindia.com">info@clickyindia.com</a></li>
+	                <li><b>Address :</b> <a href="tel:+919034489977">+91-9034489977</a></li>
+	                <li><b>Web :</b> <a href="home.html">clickyindia.com</a></li>
+	            </ul>
+            </div>
+	    </div>
+
+
+
+	<!-- Footer top content section ends -->
+
+	<!-- Footer Starts -->
+	<footer>
+	    <div id="footer1">
+	        <p>@Copyright : 2021 Clicky India | All rights reserved</p>
+	    </div>
+	    <div id="footer2">
+	        <p>Designed by Click India</p>
+	    </div>
+	</footer>
+	<!-- footer Ends -->
+
+
+
+
+
+</section>
+{% endblock %} 
