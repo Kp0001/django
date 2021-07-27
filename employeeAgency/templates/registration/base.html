@@ -10,9 +10,6 @@
       crossorigin="anonymous"
     />
     <style>
-      .col-centered {
-        text-align: center;
-      }
       body {
 	color: #000000;
 	font-family: Calibri, Arial, sans-serif;
@@ -74,6 +71,27 @@ img {
 
 /* CSS  for about section */
 
+#about-us1{
+    width:100%;
+	float:left;
+	padding: 50px 0px 50px 0px;
+	text-align:center;
+	background-color:#02A9E3;
+	color:#ffffff;
+}
+
+#about1{
+	padding:0% 1% 0% 4%;
+	float:left;
+		text-align:center;
+}
+#about1{
+	padding:0% 1% 0% 4%;
+	float:left;
+    text-align:center;
+	line-height:25px;
+}
+
 #about-us{
     width:100%;
 	float:left;
@@ -83,51 +101,47 @@ img {
 #about{
 	padding:0% 1% 0% 4%;
 	float:left;
+	width:50%;
 }
 
-#about1-us1{
-    width:100%;
-	float:left;
-	padding: 50px 0px 50px 0px;
-}
 
-#about1{
-	padding:0% 1% 0% 4%;
-	float:left;
-}
 
 #about h1{
 	line-height:0px;
 	font-size:50px;
-	text-align:center;
+	text-align:left;
 }
 
 
 #about-image img{
 	float:right;
 	padding:2%;
-	border-radius:30% ;
 }
 
 /* CSS  for service section */
 
 #services{
-
+	width:100%;
 	text-align:center;
 	float:left;
-	background-color:#ff6600;
+	background-color:#02A9E3;
 	color:#ffffff;
-	padding: 50px 50px 50px 50px;
+	padding: 50px 0px 50px 0px;
 }
 #services h1{
 
 	line-height:0px;
 }
-.service{
-
+.serviceh{
+	width:22%;
 	float:left;
-	text-align:center;
-	padding:37px;
+
+	padding:20px;
+}
+.ser{
+	float:left;
+	width:48%;
+	padding:10px;
 }
 .service1{
 
@@ -136,33 +150,14 @@ img {
 	padding:4%;
 }
 .service img{
-	border-radius:50%;
+	border-radius:25%;
 }
 
 .service1 img{
 	border-radius:50%;
 }
-/* CSS  for why choose us section section */
 
-#why-us{
-    width:100%;
-	float:left;
-	padding: 50px 0px 50px 0px;
-}
 
-#why-choose-image{
-	float:left;
-	padding:2%;
-}
-
-#why-choose{
-	padding:0% 3% 0% 1%;
-	float:right;
-}
-#why-choose h1{line-height:5px;
-}
-
-/* CSS  for CTA section */
 
 #cta{
 width:100%;
@@ -193,7 +188,7 @@ margin-bottom:50px;
 /* CSS  for Footer section */
 
 #footer-top{
-width:92%;
+width:100%;
 float:left;
 background-color:#363433;
 color:white;
@@ -203,6 +198,7 @@ padding: 2% 4% 2% 4%;
 #foot1{
 	text-align:left;
 	float:left;
+	width:30%;
 
 
 }
@@ -210,20 +206,20 @@ padding: 2% 4% 2% 4%;
 #foot2{
 	text-align:left;
 	float:left;
-	padding:0% 0% 0% 15%;
-
+	padding:0% 0% 0% 10%;
+	width:30%;
 }
 
 #foot3{
 	text-align:left;
 	float:right;
-
+	width:30%;
 }
 
 
 
 footer{
-	width:92%;
+	width:100%;
 	float:left;
 	background-color:#000000;
 	color:#ffffff;
@@ -248,8 +244,8 @@ footer{
 
 #story{
 	float:left;
-	padding: 50px 50px 50px 50px;
-	text-align:center;
+    text-align:center;
+	padding:0px 50px 50px 50px;
 }
 #story h1{
 	line-height:5px;
@@ -260,7 +256,7 @@ footer{
 #director-message{
    width:100%;
 	float:left;
-	background-color:#ff6600;
+	background-color:#02A9E3;
 	color:#ffffff;
 	padding: 50px 0px 50px 0px;
 }
@@ -297,6 +293,12 @@ footer{
 }
 
 /* CSS  for Gallery Page */
+
+#service{
+}
+.service{
+	width:42%;
+}
 
 /* CSS  for gallery section */
 
@@ -366,13 +368,13 @@ footer{
 }
 .field {
 	padding:10px 150px 10px 5px;
-	border: 2px solid #ff6600;
+	border: 2px solid #02A9E3;
 	background-color:#f7f7f7;
 }
 
 #sub{
 	padding:10px 50px 10px 50px;
-	background-color:#ff6600;
+	background-color:#02A9E3;
 	color:#ffffff;
 
 }
@@ -440,31 +442,26 @@ th {
 #info{
 	padding: 50px 0px 50px 0px;
 }
-
-
-/* Responsive with media queries*/
-
-
-@media (min-width:320px)  {
- #map { max-width: 450px; }
- }
-@media (min-width:481px)  {
- #map { max-width: 640px; }
- }
-@media (min-width:641px)  {
-	#map { max-width: 950px; }
-}
-@media (min-width:961px)  {
- #map { max-width: 1020px; }
-  }
-@media (min-width:1025px) {
- #map { max-width: 12050px; }
-}
-@media (min-width:1281px) {
-	#map { width: 100%; }
     </style>
   </head>
   <body>
+   <header>
+	    <div id  ="logo">
+             <a href="home.html"><img src="images/logo.png" alt="Logo"></a>
+		</div>
+		<nav>
+           <ul>
+		      <li ><a href="login.html">Log in</a></li>
+		  <li ><a href="account.html">Register Now</a></li>
+		      <li ><a href="contact.html">Contact</a></li>
+		      <li ><a href="employers.html">Employers</a></li>
+
+	          <li><a href="services.html">Services</a></li>
+	          <li><a href="about.html">About Us</a></li>
+              <li><a href="home.html">Home</a></li>
+           </ul>
+	    </nav>
+    </header>
     {% block content %} {% endblock %}
 
     <!-- JS, Popper.js, and jQuery -->
@@ -483,5 +480,56 @@ th {
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+
+  <!-- footer top content section started -->
+
+        <div id="footer-top">
+            <div id="foot1">
+	            <h2>Bram Employement</h2>
+	            <p>we value your professional and personal development.
+				Our professional consultants are committed to finding the
+				opportunity specific to your talents and ambitions, from
+				temporary or temporary-to-hire opportunities to permanent
+				positions with industry leading employers.</p>
+            </div>
+
+            <div id ="foot2">
+            <h2>Working Hours</h2>
+            <ul>
+            <li>Monday - 9AM to 6PM</li>
+            <li>Tuesday - 9AM to 6PM</li>
+            <li>Wednesday - 9AM to 6PM</li>
+             <li>Thursday - 9AM to 6PM</li>
+             <li>Friday - 9AM to 6PM</li>
+              <li>Saturday - 9AM to 6PM</li> </ul>
+
+
+	        </div>
+
+            <div id="foot3">
+	            <h2>Get in Touch</h2>
+	            <ul>
+	                <li><b>Location :</b> SCO 2246 Geeta Nagari, Ambala City</li>
+	                <li><b>Email id :</b> <a href="mailto:info@bramemployement.ca">info@bramemployement.ca</a></li>
+	                <li><b>Address :</b> <a href="tel:+919034489977">+1-9057810877</a></li>
+	                <li><b>Web :</b> <a href="home.html">www.bramemployement.ca</a></li>
+	            </ul>
+            </div>
+	    </div>
+
+
+
+	<!-- Footer top content section ends -->
+
+	<!-- Footer Starts -->
+	<footer>
+	    <div id="footer1">
+	        <p>@Copyright : 2021 Bram Employment | All rights reserved</p>
+	    </div>
+	    <div id="footer2">
+	        <p>Designed by Click India</p>
+	    </div>
+	</footer>
+	<!-- footer Ends -->
   </body>
 </html>
