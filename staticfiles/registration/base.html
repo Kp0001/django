@@ -1,0 +1,540 @@
+{% load static %}
+<html>
+  <head>
+    <title>Base template</title>
+
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+	color: #000000;
+	font-family: Calibri, Arial, sans-serif;
+
+}
+
+main {
+	width: 100%;
+	margin:  auto 0 auto;
+}
+
+/* CSS  for header */
+
+
+
+
+
+header h1{
+   float:left;
+   color: #FF6600;
+
+}
+
+/* CSS  for navigation */
+
+nav ul li{
+    float:right;
+    list-style-type:none;
+	padding:1%;
+	margin:1%;
+	font-size:20px;
+}
+
+nav li a{
+	color:#02A9E3;
+	text-decoration:none;
+    list-style-type:none;}
+
+nav li a:hover{
+	color:#ffffff;
+	background-color:#02A9E3;
+	text-decoration:none;
+    list-style-type:none;
+	border:1px solid #02A9E3;
+	padding:5px;
+	border-radius:3px;
+	}
+
+
+
+nav li a:active{
+	color:#10114a;
+	text-decoration:none;
+    list-style-type:none;}
+
+img {
+	max-width: 100%;
+}
+
+/* CSS  for about section */
+
+#about-us1{
+    width:100%;
+	float:left;
+	padding: 50px 0px 50px 0px;
+	text-align:center;
+	background-color:#02A9E3;
+	color:#ffffff;
+}
+
+#about1{
+	padding:0% 1% 0% 4%;
+	float:left;
+		text-align:center;
+}
+#about1{
+	padding:0% 1% 0% 4%;
+	float:left;
+    text-align:center;
+	line-height:25px;
+}
+
+#about-us{
+    width:100%;
+	float:left;
+	padding: 50px 0px 50px 0px;
+}
+
+#about{
+	padding:0% 1% 0% 4%;
+	float:left;
+	width:50%;
+}
+
+
+
+#about h1{
+	line-height:0px;
+	font-size:50px;
+	text-align:left;
+}
+
+
+#about-image img{
+	float:right;
+	padding:2%;
+}
+
+/* CSS  for service section */
+
+#services{
+	width:100%;
+	text-align:center;
+	float:left;
+	background-color:#02A9E3;
+	color:#ffffff;
+	padding: 50px 0px 50px 0px;
+}
+#services h1{
+
+	line-height:0px;
+}
+.serviceh{
+	width:22%;
+	float:left;
+
+	padding:20px;
+}
+.ser{
+	float:left;
+	width:48%;
+	padding:10px;
+}
+.service1{
+
+	float:left;
+	text-align:center;
+	padding:4%;
+}
+.service img{
+	border-radius:25%;
+}
+
+.service1 img{
+	border-radius:50%;
+}
+
+
+
+#cta{
+width:100%;
+float:left;
+font-size:20px;
+padding:50px 0px 50px 0px;
+text-align:center;
+background-color:#ff6600;
+color:white;
+margin-bottom:50px;
+}
+
+#cta h1{line-height:30px;
+}
+
+.button {
+  background-color: #ffffff;
+  border-radius: 15px;
+  border-color:#ff6600;
+  color: #ff6600;
+  padding: 10px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* CSS  for Footer section */
+
+#footer-top{
+width:100%;
+float:left;
+background-color:#363433;
+color:white;
+padding: 2% 4% 2% 4%;
+}
+
+#foot1{
+	text-align:left;
+	float:left;
+	width:30%;
+
+
+}
+
+#foot2{
+	text-align:left;
+	float:left;
+	padding:0% 0% 0% 10%;
+	width:30%;
+}
+
+#foot3{
+	text-align:left;
+	float:right;
+	width:30%;
+}
+
+
+
+footer{
+	width:100%;
+	float:left;
+	background-color:#000000;
+	color:#ffffff;
+	padding:0 4% 0% 4%;
+}
+
+#footer1{
+	float:left;
+
+}
+
+#footer2{
+	float:right;
+    text-align:right;
+}
+
+/* Home Page CSS ends */
+
+/* About Us Page CSS starts */
+
+/* CSS  for our story section */
+
+#story{
+	float:left;
+    text-align:center;
+	padding:0px 50px 50px 50px;
+}
+#story h1{
+	line-height:5px;
+}
+
+/* CSS  for director message section section */
+
+#director-message{
+   width:100%;
+	float:left;
+	background-color:#02A9E3;
+	color:#ffffff;
+	padding: 50px 0px 50px 0px;
+}
+
+#message{
+	padding:0% 3% 0% 1%;
+	float:right;
+
+}
+
+#message h1{
+	font-size:40px;
+	line-height:20px;
+}
+#director-image{
+	float:left;
+	padding:2%;
+}
+
+/* CSS  for team member section */
+
+#team{
+	float:left;
+	text-align:center;
+	padding:20px;
+	line-height:15px;
+}
+
+#team, h1{
+   padding:20px;
+}
+
+.team-member{
+	float:left;
+	text-align:center;
+	padding:30px;
+	line-height:10px;
+}
+
+/* CSS  for Gallery Page */
+
+#service{
+}
+.service{
+	width:42%;
+}
+
+/* CSS  for gallery section */
+
+#gallery{
+	float:left;
+	text-align:center;
+	padding:50px 30px 50px 30px;
+	line-height:5px;
+	background-color:#ff6600;
+	color:#ffffff;
+
+}
+#gallery h1{
+	font-size:50px;
+}
+.gallery-img{
+	float:left;
+	text-align:center;
+	padding:30px 10px;
+	line-height:5px;
+}
+
+/* Contact Us Us Page CSS */
+
+#contacts{
+	width:100%;
+
+	float:left;
+
+}
+
+.contact{
+	width:20%;
+	float:left;
+	text-align:center;
+	padding:30px;
+}
+
+
+#gets{
+	width:100%;
+	float:left;
+	padding: 50px 0px 50px 0px;
+}
+
+#contact-image{
+	float:right;
+	padding:2% 5% 2% 2%;
+
+}
+#get-in-touch{
+	padding:0% 1% 0% 4%;
+	float:left;
+}
+
+
+#logo{
+	float:left;
+}
+
+#foot3 li a{
+	color:#ffffff;
+}
+
+#foot3 li a:hover{
+	color:#ff6600;
+}
+.field {
+	padding:10px 150px 10px 5px;
+	border: 2px solid #02A9E3;
+	background-color:#f7f7f7;
+}
+
+#sub{
+	padding:10px 50px 10px 50px;
+	background-color:#02A9E3;
+	color:#ffffff;
+
+}
+
+.map{
+
+	width:100%;
+
+}
+
+#pricing{
+
+	text-align:center;
+	padding:5%;
+	padding-top:50px;
+	margin-top:5%;
+}
+#pricing h1 {
+	line-height:5px;
+}
+
+#pricing h4{
+	padding-top:50px;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid black;
+  margin-top:30px;
+}
+
+table th, td {
+  text-align: left;
+  padding: 8px;
+  border:1px solid black;
+}
+th {
+	background-color:#ff6600;
+	color:#ffffff;
+}
+
+
+
+#account_banner{
+	width:100%;
+	text-align:center;
+	float:left;
+	background-color:#007bff;
+	color:#ffffff;
+    padding: 30px 0px 30px 0px;
+	margin-bottom:50px;
+
+}
+#account_banner, h1{
+          font-size:50px;
+}
+#account_banner, h5{
+          font-size:20px;
+		  line-height:15px;
+}
+
+
+
+#info{
+	padding: 50px 0px 50px 0px;
+}
+    </style>
+  </head>
+  <body>
+   <header>
+	    <div id  ="logo">
+             <a href="home.html"><img src="{% static "images/logo.png" %}" alt="Logo"></a>
+		</div>
+		<nav>
+           <ul>
+		      <li ><a href="login.html">Log in</a></li>
+		  <li ><a href="account.html">Register Now</a></li>
+		      <li ><a href="contact.html">Contact</a></li>
+		      <li ><a href="employers.html">Employers</a></li>
+
+	          <li><a href="services.html">Services</a></li>
+	          <li><a href="about.html">About Us</a></li>
+              <li><a href="home.html">Home</a></li>
+           </ul>
+	    </nav>
+    </header>
+    {% block content %} {% endblock %}
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+  <!-- footer top content section started -->
+
+        <div id="footer-top">
+            <div id="foot1">
+	            <h2>Bram Employement</h2>
+	            <p>we value your professional and personal development.
+				Our professional consultants are committed to finding the
+				opportunity specific to your talents and ambitions, from
+				temporary or temporary-to-hire opportunities to permanent
+				positions with industry leading employers.</p>
+            </div>
+
+            <div id ="foot2">
+            <h2>Working Hours</h2>
+            <ul>
+            <li>Monday - 9AM to 6PM</li>
+            <li>Tuesday - 9AM to 6PM</li>
+            <li>Wednesday - 9AM to 6PM</li>
+             <li>Thursday - 9AM to 6PM</li>
+             <li>Friday - 9AM to 6PM</li>
+              <li>Saturday - 9AM to 6PM</li> </ul>
+
+
+	        </div>
+
+            <div id="foot3">
+	            <h2>Get in Touch</h2>
+	            <ul>
+	                <li><b>Location :</b> SCO 2246 Geeta Nagari, Ambala City</li>
+	                <li><b>Email id :</b> <a href="mailto:info@bramemployement.ca">info@bramemployement.ca</a></li>
+	                <li><b>Address :</b> <a href="tel:+919034489977">+1-9057810877</a></li>
+	                <li><b>Web :</b> <a href="home.html">www.bramemployement.ca</a></li>
+	            </ul>
+            </div>
+	    </div>
+
+
+
+	<!-- Footer top content section ends -->
+
+	<!-- Footer Starts -->
+	<footer>
+	    <div id="footer1">
+	        <p>@Copyright : 2021 Bram Employment | All rights reserved</p>
+	    </div>
+	    <div id="footer2">
+	        <p>Designed by Click India</p>
+	    </div>
+	</footer>
+	<!-- footer Ends -->
+  </body>
+</html>

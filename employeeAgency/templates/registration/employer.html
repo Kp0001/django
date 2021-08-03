@@ -1,0 +1,32 @@
+{% extends 'registration/base.html' %} {% block content %} {% load static %}
+
+
+<div id="account_banner">
+    <h5>Bram Employement</h5>
+    <h1>Employeers Organistions</h1>
+</div>
+<div id="emp">
+
+    <h1>Our Partners</h1>
+    {% if message_name %}
+    <center><h2>Thanks {{message_name}}! </h2>
+        <p> We received your email and will respond shortly...</p>
+    </center>
+    {% endif %}
+    {% for comp in company %}
+   <!-- <div class="serviceh">
+        <img src="{% static 'registration/images/logo.png'%}" alt="Web Development Image">
+        <h2>{{comp.name}}</h2>
+        <button class="button" type="submit">Apply Now</button>
+    </div>-->
+    <form method="post">
+        {% csrf_token %}
+		<input type="hidden" name="name" value="{{ comp.name }}">
+        <input type="hidden" name="job" value="{{ comp.jobName }}">
+        <button type="submit">Submit</button>
+    </form>
+
+
+</div>
+{% endfor %}
+{% endblock %}
