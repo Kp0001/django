@@ -1,3 +1,4 @@
+{% load static %}
 <html>
   <head>
     <title>Base template</title>
@@ -285,11 +286,15 @@ footer{
 	line-height:15px;
 }
 
+#team, h1{
+   padding:20px;
+}
+
 .team-member{
 	float:left;
 	text-align:center;
-	padding:40px;
-	line-height:5px;
+	padding:45px;
+	line-height:10px;
 }
 
 /* CSS  for Gallery Page */
@@ -442,23 +447,72 @@ th {
 #info{
 	padding: 50px 0px 50px 0px;
 }
+#emp{
+	text-align:center;
+	background-color:#ffffff;
+	color:#000000;
+	padding:50px 0px 0px 0px;
+	line-height:10px;
+
+}
+.button {background-color: #008CBA;
+color:#ffffff;
+border:10x solid #ffffff;
+border-color:#008CBA;
+}
+.button a{
+color:#ffffff;
+text-decoration:none;
+
+}
+#apply{
+	text-align:center;
+	padding-top:50px;
+
+}
+form li {
+	list-style: none;
+	margin-bottom: 7px;
+	}
+
+	form ul li label{
+	float: left;
+	clear: left;
+	width: 100px;
+	text-align: center;
+	margin-right: 10px;
+	font-family:Verdana, Arial, "Times new Roman", sans-serif;
+	font-size:14px;
+	}
+
+	form ul li input, select, span {
+	float: left;
+	margin-bottom: 10px;
+	}
+
+	form textarea {
+	float: left;
+	width: 350px;
+	height: 150px;
+	}
     </style>
   </head>
   <body>
    <header>
 	    <div id  ="logo">
-             <a href="home.html"><img src="images/logo.png" alt="Logo"></a>
+             <a href="{% url 'home' %}">
+             <img src="{% static 'registration/images/logo1.jpg' %}"/></a>
 		</div>
 		<nav>
            <ul>
-		      <li ><a href="login.html">Log in</a></li>
-		  <li ><a href="account.html">Register Now</a></li>
-		      <li ><a href="contact.html">Contact</a></li>
-		      <li ><a href="employers.html">Employers</a></li>
+		      <li ><a href="{% url 'home' %}">Log in</a></li>
+		  <li ><a href="{% url 'register' %}">Register Now</a></li>
+		      <li ><a href="{% url 'contact' %}">Contact</a></li>
+		      <li ><a href="{% url 'employers' %}">Employers</a></li>
 
 	          <li><a href="services.html">Services</a></li>
-	          <li><a href="about.html">About Us</a></li>
-              <li><a href="home.html">Home</a></li>
+	          <li><a href="{% url 'about' %}">About Us</a></li>
+              <li><a href="{% url 'home' %}">Home</a></li>
            </ul>
 	    </nav>
     </header>

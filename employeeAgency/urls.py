@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
+from django.views.generic import TemplateView
+
 from . import views
+from .views import about
+
 admin.site.site_header = 'Employee Agency'
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,6 +28,9 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('home/', views.home, name='home'),
     path('register/', views.register, name='register'),
+    path('about/', about, name='about'),
+    path('contact/', views.contact, name='contact'),
+    path('employers/', views.employer, name='employers'),
 
 
 ]

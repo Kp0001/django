@@ -16,7 +16,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 print(BASE_DIR, "dafsfsdf")
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -27,7 +26,6 @@ SECRET_KEY = 'django-insecure-+w+$++dfb8_kw+s1zg(*!*-i1^65snv-7k2!)4a%#7q+&k40v=
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -42,7 +40,6 @@ INSTALLED_APPS = [
     'employeeAgency'
 
 ]
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -74,7 +71,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'employeeAgency.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -116,9 +112,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -132,14 +125,25 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/templates/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [
+    r'D:\study\python\term2\termProject\employeeAgency\employeeAgency\templates',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'employeeAgency.Employee'
+
+# Email Settings
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'singhkomalpreet102@gmail.com'
+EMAIL_HOST_PASSWORD = 'nangallubana23'
+EMAIL_USE_TLS = True
