@@ -14,11 +14,7 @@
     </center>
     {% endif %}
     {% for comp in company %}
-   <!-- <div class="serviceh">
-        <img src="{% static 'registration/images/logo.png'%}" alt="Web Development Image">
-        <h2>{{comp.name}}</h2>
-        <button class="button" type="submit">Apply Now</button>
-    </div>-->
+
     <form method="post">
         {% csrf_token %}
 		<input type="hidden" name="name" value="{{ comp.name }}">

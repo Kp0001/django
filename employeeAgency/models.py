@@ -3,7 +3,6 @@ from django.contrib.auth.models import AbstractUser, PermissionsMixin
 from django.db import models
 
 
-
 class UserManager(BaseUserManager):
     def create_user(self, email, username, is_admin=False, is_staff=True,
                     is_active=True, password=None, *args, **kwargs):
@@ -73,13 +72,13 @@ class Company(models.Model):
     maxNeeded = models.IntegerField()
 
     def __str__(self):
-        return self.name + ' ---- ' + self.jobName
+        return '{} {}'.format(self.name, self.jobName)
 
 
 class Request(models.Model):
     name = models.ForeignKey(Company, blank=True, null=True, on_delete=models.CASCADE)
 
-    username = models.OneToOneField(Employee, blank=True, null=True,on_delete=models.CASCADE)
+    username = models.OneToOneField(Employee, blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name, self.username
+        return '{} {}'.format(self.name, self.username)

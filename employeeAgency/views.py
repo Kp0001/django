@@ -12,10 +12,11 @@ from django.core.mail import send_mail
 
 # Views
 from .models import Company
+from .utils import get_plot
 
 
 @login_required
-def home(request):
+def profile(request):
     return render(request, "registration/success.html", {})
 
 
@@ -44,12 +45,27 @@ def contact(request):
     return render(request, 'registration/contact.html', {})
 
 
+def home(request):
+    return render(request, 'registration/home.html', {})
+
+
+def stat(request):
+    qs = Company.objects.all()
+    x = [x.name for x in qs]
+    y = [y.jobName for y in qs]
+    chart = get_plot(x, y)
+    #    'company_name':chart
+
+    return render(request, "registration/stat.html", {'chart': chart})
+
+
 @login_required
 def employer(request):
     company = Company.objects.all()
     message_name = request.user.username
     message_email = request.user.email
-    message = 'Hello, my name is ' + message_name +' my registred email is ' + message_email + ' and i want to work in  ' + request.POST.get("name", "") + ' in ' + request.POST.get("job", "")
+    message = 'Hello, my name is ' + message_name + ' my registred email is ' + message_email + ' and i want to work in  ' + request.POST.get(
+        "name", "") + ' in ' + request.POST.get("job", "")
     print(request.POST)
     if request.method == 'POST':
         send_mail(message_name, message, message_email, ['kpsingh@yopmail.com'])
