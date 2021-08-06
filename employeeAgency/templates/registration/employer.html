@@ -7,19 +7,37 @@
 </div>
 <div id="emp">
 
-    <h1>Our Partners</h1>
+    <h1>Jobs</h1>
     {% if message_name %}
-    <center><h2>Thanks {{message_name}}! </h2>
+    <center>
+        <h2>Thanks {{message_name}}! </h2>
         <p> We received your email and will respond shortly...</p>
     </center>
     {% endif %}
+    <table>
+
+        </table>
     {% for comp in company %}
 
     <form method="post">
         {% csrf_token %}
-		<input type="hidden" name="name" value="{{ comp.name }}">
-        <input type="hidden" name="job" value="{{ comp.jobName }}">
-        <button type="submit">Submit</button>
+<table align="center">
+       <tr>
+        <th>COMPANY</th>
+        <th>JOB NAME</th>
+        <th>PAY</th>
+        <th>REQUEST</th>
+    </tr>
+        <tr>
+            <td>{{comp.name}}</td>
+            <td>{{comp.jobName}}</td>
+            <td>{{comp.pay}}</td>
+            <td><input type="hidden" name="name" value="{{ comp.name }}">
+             <input type="hidden" name="job" value="{{ comp.jobName }}">
+             <button type="submit">Submit</button></td>
+        </tr>
+    </table>
+
     </form>
 
 

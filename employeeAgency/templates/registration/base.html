@@ -10,8 +10,13 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-      body {
+
+
+/* Home Page CSS  starts */
+
+body {
 	color: #000000;
 	font-family: Calibri, Arial, sans-serif;
 
@@ -25,14 +30,40 @@ main {
 /* CSS  for header */
 
 
+#header-top{
+	background-color: #02A9E3;
+
+
+	padding: 10px 30px 30px 30px;
+
+}
+
+#header-left{
+
+
+	float:left;
+
+}
+#header-right{
+
+	color:#ffffff;
+	float:right;
+
+}
 
 
 
 header h1{
    float:left;
-   color: #FF6600;
+
 
 }
+header{
+  padding:10px 0px 0px 0px;
+
+
+}
+
 
 /* CSS  for navigation */
 
@@ -189,7 +220,8 @@ margin-bottom:50px;
 /* CSS  for Footer section */
 
 #footer-top{
-width:100%;
+width:92
+%;
 float:left;
 background-color:#363433;
 color:white;
@@ -199,7 +231,7 @@ padding: 2% 4% 2% 4%;
 #foot1{
 	text-align:left;
 	float:left;
-	width:30%;
+	width:26%;
 
 
 }
@@ -207,20 +239,20 @@ padding: 2% 4% 2% 4%;
 #foot2{
 	text-align:left;
 	float:left;
-	padding:0% 0% 0% 10%;
-	width:30%;
+	padding:0% 0% 0% 15%;
+	width:26%;
 }
 
 #foot3{
 	text-align:left;
 	float:right;
-	width:30%;
+	width:26%;
 }
 
 
 
 footer{
-	width:100%;
+	width:92%;
 	float:left;
 	background-color:#000000;
 	color:#ffffff;
@@ -286,15 +318,11 @@ footer{
 	line-height:15px;
 }
 
-#team, h1{
-   padding:20px;
-}
-
 .team-member{
 	float:left;
 	text-align:center;
-	padding:45px;
-	line-height:10px;
+	padding:40px;
+	line-height:5px;
 }
 
 /* CSS  for Gallery Page */
@@ -328,19 +356,22 @@ footer{
 
 /* Contact Us Us Page CSS */
 
-#contacts{
-	width:100%;
+#con1{
 
-	float:left;
-
-}
-
-.contact{
-	width:20%;
-	float:left;
+	padding: 50px 10px 50px 10px;
 	text-align:center;
-	padding:30px;
+	color:#000000;
 }
+
+#contact1{
+
+    text-align:center;
+	width:33%;
+
+	float:left;
+	line-height:50%;
+}
+
 
 
 #gets{
@@ -362,6 +393,7 @@ footer{
 
 #logo{
 	float:left;
+	padding-left:30px;
 }
 
 #foot3 li a{
@@ -418,7 +450,7 @@ table th, td {
   border:1px solid black;
 }
 th {
-	background-color:#ff6600;
+	background-color:#007bff;
 	color:#ffffff;
 }
 
@@ -447,6 +479,10 @@ th {
 #info{
 	padding: 50px 0px 50px 0px;
 }
+
+
+/* Responsive with media queries*/
+
 #emp{
 	text-align:center;
 	background-color:#ffffff;
@@ -495,6 +531,10 @@ form li {
 	width: 350px;
 	height: 150px;
 	}
+
+
+
+
     </style>
   </head>
   <body>
@@ -513,7 +553,9 @@ form li {
                {% endif %}
 
                 {% if user.is_authenticated %}
+
 		      <li ><a href="{% url 'logout' %}">Logout</a></li>
+               <li ><a href="{% url 'profile' %}">Profile</a></li>
                {% endif %}
                {% if user.is_authenticated %}
 		      <li ><a href="{% url 'employers' %}">Jobs</a></li>
@@ -521,7 +563,7 @@ form li {
                 <li ><a href="{% url 'contact' %}">Contact</a></li>
 
 
-	          <li><a href="services.html">Services</a></li>
+	          <li><a href="{% url 'stat' %}">Statistics</a></li>
 	          <li><a href="{% url 'about' %}">About Us</a></li>
               <li><a href="{% url 'home' %}">Home</a></li>
            </ul>
@@ -548,7 +590,7 @@ form li {
 
   <!-- footer top content section started -->
 
-        <div id="footer-top">
+         <div id="footer-top">
             <div id="foot1">
 	            <h2>Bram Employement</h2>
 	            <p>we value your professional and personal development.

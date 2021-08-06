@@ -1,7 +1,15 @@
 
  {% extends 'registration/base.html' %} {% block content %} {% load static %}
+<section class="home" id="home">
 
-	    <img src="{% static 'registration/images/imi.png'%}" alt="Responsive Web Design Graphic">
+	<div class="home-slider owl-carousel">
+
+    <div class="item">
+        <img src="{% static 'registration/images/imi.png'%}" alt="">
+
+    </div>
+
+</div>
 		<div id="about-us1">
 	        <div id="about1">
 	           <h4 span style="color:#ffffff; font-size:20px; text-align:center;">Welcome to Bram Employment</span></h4>
@@ -19,6 +27,27 @@
 		<!-- About us section starts -->
 	    <div id="about-us">
 	        <div id="about">
+	           <h4> <span style="color:#02A9E3; font-size:20px;">Welcome to Employment Agency</span></h4> <br/> <br>
+	           <h1>About Us</h1> <br>
+	            <h2><span style="color: #a8adb5;">We believe in the value that our functions add to a business. We feel that this specialist part
+					of HR is often unrecognised for its contribution to the profitability and success of a business.</span>
+	           </h2>
+                <ul style="font-size:22px;">
+                    <li>More then 200 companies we help</li>
+                    <hr>
+					<li>More then Corporate Programs</li>	  <hr>
+		            <li>More then 28 Trainings Course</li>  <hr>
+					<li>More then 125 Strategic Partners</li>
+				</ul>
+
+	        </div>
+
+	        <div id="about-image">
+	         <img src="{% static 'registration/images/girl.png'%}" alt="Responsive Web Design Graphic">
+	        </div>
+	    </div>
+	   <!-- <div id="about-us">
+	        <div id="about">
 	           <h4 span style="color:#02A9E3; font-size:20px;">Welcome to Employment Agency</span></h4>
 	           <h1>About Us</h1>
 	            <h2 span style="color: #a8adb5;">We believe in the value that our functions add to a business. We feel that this specialist part
@@ -30,38 +59,22 @@
 					<li>More then Corporate Programs</li>	  <hr>
 		            <li>More then 28 Trainings Course</li>  <hr>
 					<li>More then 125 Strategic Partners</li>
+				</ul>
 
 	        </div>
+
+
 
 	        <div id="about-image">
-	         <img src="{% static 'registration/images/girl.png'%}" alt="Responsive Web Design Graphic">
+	         <img src="{% static 'registration/images/girl.png'%}" alt="Responsive Web Design Graphic"><img src="{% static 'registration/images/girl.png'%}" alt="Responsive Web Design Graphic">
 	        </div>
-	    </div>
+	    </div>-->
 	    <!-- About us section ends -->
 
 	    <!-- Client section starts -->
 
-	    <div id="services">
-	        <h5>Bram Employement</h5>
-	        <h1>Our Clients</h1>
-	        <div class="serviceh">
-	             <img src="{% static 'registration/images/logo.png'%}" alt="Web Development Image">
-	             <h2>Clicky India</h2>
-	        </div>
-	        <div class="serviceh">
-	             <img src="{% static 'registration/images/logo.png'%}" alt="Graphic Designing Image">
-	             <h2>Punjab Bakery</h2>
-	        </div>
-	        <div class="serviceh">
-	             <img src="{% static 'registration/images/logo.png'%}" alt="Social Media Image">
-	             <h2>Maan Transport</h2>
-	        </div>
-			<div class="serviceh">
-	             <img src="{% static 'registration/images/logo.png'%}" alt="Google Map Virtual Tour Image">
-	             <h2>Piyush & Group</h2>
-	        </div>
 
-	    </div>
+</section>
 
 	    <!-- Client section ends -->
 

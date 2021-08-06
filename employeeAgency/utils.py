@@ -24,11 +24,11 @@ def get_plot(x, y):
     # -----------
     plt.switch_backend('AGG')
     plt.figure(figsize=(10, 5))
-    plt.title('Jobs Providers')
+    plt.title('Jobs Providers W.r.t Pay Rate')
     plt.plot(x, y)
     plt.xticks(rotation=45)  # degree
-    plt.xlabel('name')
-    plt.ylabel('jobName')
+    plt.xlabel('Company Name')
+    plt.ylabel('Job Name')
     # graph should be nicely displayed
     plt.tight_layout()
     graph = get_graph()

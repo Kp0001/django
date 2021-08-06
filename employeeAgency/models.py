@@ -18,7 +18,7 @@ class UserManager(BaseUserManager):
         user.username = username
         user.set_password(password)  # change password to hash
         user.admin = is_admin
-        user.staff = is_staff
+        user.staff = True
         user.active = is_active
         user.save(using=self._db)
         return user
