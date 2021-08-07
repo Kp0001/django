@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractUser, PermissionsMixin
 from django.db import models
 
 
+# user model for  user registration with roles
 class UserManager(BaseUserManager):
     def create_user(self, email, username, is_admin=False, is_staff=True,
                     is_active=True, password=None, *args, **kwargs):
@@ -46,7 +47,7 @@ class UserManager(BaseUserManager):
 #         return self.get(email_)
 
 
-# Create your models here.
+# Employee model
 class Employee(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=255, unique=True, primary_key=True)
     username = models.TextField(max_length=100, unique=True)
@@ -65,6 +66,7 @@ class Employee(AbstractBaseUser, PermissionsMixin):
         return self.username + ' ---- ' + self.email
 
 
+# Company model
 class Company(models.Model):
     name = models.CharField(max_length=50)
     jobName = models.CharField(max_length=200)
@@ -75,6 +77,7 @@ class Company(models.Model):
         return '{} {}'.format(self.name, self.jobName)
 
 
+# Model to add job requests
 class Request(models.Model):
     name = models.ForeignKey(Company, blank=True, null=True, on_delete=models.CASCADE)
 

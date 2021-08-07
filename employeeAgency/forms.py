@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django import forms
 from .models import *
 
-
+# Set up form field for user registration
 class SignUpForm(UserCreationForm):
     class Meta:
         model = Employee

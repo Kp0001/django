@@ -1,12 +1,14 @@
 {% extends 'registration/base.html' %} {% block content %}
 <div id="account_banner">
-	     <h5>Bram Employement</h5> <br>
+	     <h5>Bram Employment</h5> <br>
 	        <h1>Job Statistics</h1>	<br>
 	    </div>
     {% if chart %}
 <div align="center">
         <img src="data:image/png;base64, {{chart|safe}}">
 </div>
+<p>Pay statistics:</p> <br>
+<p> Average pay: {{avgPay}}, Median Pay: {{median}}, Standard deviation of Pay:{{std}}, Mode: {{mode}}</p>
     {% endif %}
 
 {% endblock %}

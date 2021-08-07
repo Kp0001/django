@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import base64
 from io import BytesIO
+import numpy as np
 
 
 def get_graph():
@@ -24,11 +25,11 @@ def get_plot(x, y):
     # -----------
     plt.switch_backend('AGG')
     plt.figure(figsize=(10, 5))
-    plt.title('Jobs Providers W.r.t Pay Rate')
+    plt.title('Jobs Providers')
     plt.plot(x, y)
     plt.xticks(rotation=45)  # degree
     plt.xlabel('Company Name')
-    plt.ylabel('Job Name')
+    plt.ylabel('Pay')
     # graph should be nicely displayed
     plt.tight_layout()
     graph = get_graph()
